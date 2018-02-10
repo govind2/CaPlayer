@@ -50,6 +50,13 @@ class JavaActivity : AppCompatActivity(), IVLCVout.OnNewVideoLayoutListener {
 
         val args = ArrayList<String>()
         args.add("-vvv")
+        //args.add("--file-caching=10000")
+        //args.add("--http-caching=30000")
+        //args.add("")
+        //args.add("--rtsp-caching=2600")
+        //args.add("--gnutls-cache-size=30000")
+        //args.add("--udp-caching=3000")
+        //args.add("--sout-mux-caching=15000")
         mLibVLC = LibVLC(this, args)
         mMediaPlayer = MediaPlayer(mLibVLC)
 

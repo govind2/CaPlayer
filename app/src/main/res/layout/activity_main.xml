@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:keepScreenOn="true"
     android:background="@android:color/background_dark"
-    tools:context=".NativeActivity">
+    tools:context=".JavaActivity">
 
     <FrameLayout
         android:id="@+id/video_surface_frame"
