@@ -50,8 +50,24 @@ class JavaActivity : AppCompatActivity(), IVLCVout.OnNewVideoLayoutListener {
 
         val args = ArrayList<String>()
         args.add("-vvv")
+
+        args.add("--aout=opensles");
+        args.add("--audio-time-stretch"); // time stretching
+        args.add("--no-drop-late-frames");
+        args.add("--no-skip-frames");
+        args.add("--clock-jitter=0");
+        args.add("--clock-synchro=0");
+        args.add("--network-caching=10000");
+        args.add("--live-caching=2000");
+        args.add("--video-filter=deinterlace");
+        //args.add("'--volume=80");
+        //args.add("--nooverlay");
+        //args.add("--brightness=2");
+        //args.add("--sout-deinterlace-mode=yadif");
+        args.add("--avcodec-fast");
+
         //args.add("--file-caching=10000")
-        //args.add("--http-caching=30000")
+        //args.add("--http-caching=130000")
         //args.add("")
         //args.add("--rtsp-caching=2600")
         //args.add("--gnutls-cache-size=30000")
@@ -306,7 +322,7 @@ class JavaActivity : AppCompatActivity(), IVLCVout.OnNewVideoLayoutListener {
         private val ENABLE_SUBTITLES = true
         private val TAG = "JavaActivity"
         //private static final String SAMPLE_URL = "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_640x360.m4v";
-        private val SAMPLE_URL = "http://play.3mux.ml/555abc333abc/5232"
+        private val SAMPLE_URL = "http://play.3mux.ml/555abc333abc/4001"
         private val SURFACE_BEST_FIT = 0
         private val SURFACE_FIT_SCREEN = 1
         private val SURFACE_FILL = 2
